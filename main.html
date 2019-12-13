@@ -1,0 +1,560 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content = "width=device-width, initial-scale=1">
+	<title>Горнолыжный курорт Mountain Peaks</title>
+	<link rel="stylesheet" type="text/css" href="css/normalize.css">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link rel="stylesheet" type="text/css" href="js/slick/slick.css"/>
+	<link rel="stylesheet" type="text/css" href="js/slick/slick-theme.css"/>
+	<link crossorigin='anonymous' href='https://use.fontawesome.com/releases/v5.8.2/css/all.css' integrity='sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay' rel='stylesheet'/>
+	<link href="https://fonts.googleapis.com/css?family=Montserrat:100,200,300,400,500,600,700|Source+Sans+Pro:300,400,600,700&display=swap&subset=cyrillic,cyrillic-ext" rel="stylesheet">
+	<link rel="icon" href="images/logo-black.png">
+	<meta name="theme-color" content="#3179CC">
+</head>
+<body>
+<div class="page">
+<div class="main" id="main__page">
+	<header class="header" id="header">
+			<div class="header__inner">
+				<a class="header__logo" id="logo" href="main.html"><img src="images/svg/logo.svg" alt="logo"></a>
+				<nav class="nav" id="nav">
+					<a class = "nav__link" href="#blocks" data-scroll="#blocks">Услуги</a>
+					<a class = "nav__link" href="residence.html">Проживание</a>
+					<a class = "nav__link" href="trekking.html">Активный отдых</a>
+					<a class = "nav__link" href="#">Обучение</a>
+					<a class = "nav__link" href="about.html">О курорте</a>
+					<a class = "nav__link" href="#contacts" data-scroll="#contacts">Контакты</a>
+				</nav>
+				<div class="header__right">
+					<a href="#" class="vpop" data-type="youtube" data-id="wH3GwjmBCwA" data-autoplay='true'><img src="images/svg/camera.svg" alt="web-camera"></a>
+					<div class="video-popup-overlay"></div>
+						<div class="video-popup-container">
+						  <div class="video-popup-close" class="fade">&#10006;</div>
+						  <div class="video-popup-iframe-container">
+						    <iframe class="video-popup-iframe" src="" width="100%" height="100%" frameborder="0"></iframe>
+						  </div>
+						</div>
+					<p>рус/eng</p>
+				</div>
+				<button class="nav__toggle" id="nav__toggle" type="button">
+					<span class="nav__toggle__item"></span>
+				</button>
+			</div>
+	</header>
+	<div class="container">
+		<div class="main__triangle">
+			<img src="images/svg/cloud.svg" alt="cloud">
+			<span>-7 t°C</span>
+		</div>
+		<div class="main__arrows">
+			<a href="#" data-scroll="#blocks">
+				<!-- <img src="images/svg/arrow.svg" alt="arrow"> -->
+				<span></span>
+				<span></span>
+				<span></span>
+			</a>
+		</div>
+		<div class="main__content">
+			<div class="main__text">
+				<h1 class="main__title">Mountain<br>Peaks</h1>
+				<div class="main__subtitle">Ski Resort</div>
+			</div>
+			<form action="url" method="post" class="form">
+				<div class="form__title">Забронируйте сегодня</div>
+				<input type="text" name="name" placeholder="Полное имя">
+				<input type="text" name="email" placeholder="Email">
+				<input type="number" name="telephone" placeholder="Телефон">
+				<div class="form__date">
+	                <div class="form__date__item">
+	                	<div class="label"><label>Дата заезда</label></div>
+						<div class="input"><input type="date" name="data_one"></div>
+					</div>
+					<div class="form__date__item">
+	                	<div class="label"><label>Дата выезда</label></div>
+						<input type="date" name="data_two">
+					</div>
+				</div>
+				<div class="input-submit"><input type="submit" name="button" value="Забронировать"></div>
+			</form>
+			<button class="input-submit-mobile" onclick="openForm()">Забронировать</button>
+			<form action="url" method="post" class="booking-form" id="bookingForm">
+				<div class="booking-form__title">Забронируйте сегодня</div>
+				<input type="text" name="name" placeholder="Полное имя">
+				<input type="text" name="email" placeholder="Email">
+				<input type="number" name="telephone" placeholder="Телефон">
+				<div class="booking-form__date">
+	                <div class="booking-form__date__item">
+	                	<div class="booking-label"><label>Дата заезда</label></div>
+						<div class="input"><input type="date" name="data_one"></div>
+					</div>
+					<div class="booking-form__date__item">
+	                	<div class="booking-label"><label>Дата выезда</label></div>
+						<input type="date" name="data_two">
+					</div>
+				</div>
+				<div class="booking-input-submit">
+					<input type="submit" name="button" value="Забронировать">
+					<span class="booking-btn" onclick="closeForm()">Забронирую позже</span>
+				</div>
+			</form>
+		</div>
+	</div>
+</div>
+
+<div class="blocks" id="blocks">
+	<a href="#" class="blocks__item--1 blocks__item">
+		<div class="blocks__content">
+			<div class="blocks__title">Восхождение</div>
+			<div class="blocks__text">покорите вершину Эльбруса</div>
+			<div class="blocks__info">Закажите услугу сегодня и получите скидку…</div>
+		</div>
+	</a>
+	<a href="trekking.html" class="blocks__item--2 blocks__item">
+		<div class= "blocks__content">
+			<div class="blocks__title">Треккинг</div>
+			<div class="blocks__text">побывайте в необыкновенных местах</div>
+			<div class="blocks__info">Закажите услугу сегодня и получите скидку, подробнее…</div>
+		</div>
+	</a>
+	<a href="#" class="blocks__item--3 blocks__item">
+		<div class="blocks__content">
+			<div class="blocks__title">Обучение</div>
+			<div class="blocks__text">выберите программу для своего уровня</div>
+			<div class="blocks__info">Закажите услугу сегодня и получите скидку…</div>
+		</div>
+	</a>
+	<a href="#" class="blocks__item--4 blocks__item">
+		<div class="blocks__content">
+			<div class="blocks__title">СПА-комплекс</div>
+			<div class="blocks__text">отдохните душой и телом</div>
+			<div class="blocks__info">Сегодня на все SPA-процедуры скидка 20%…</div>
+		</div>
+	</a>
+	<a href="#" class="blocks__item--5 blocks__item">
+		<div class="blocks__content">
+			<div class="blocks__title">Гостиница & шале</div>
+			<div class="blocks__text">оцените сервис международного уровня</div>
+			<div class="blocks__info">Комфортабельные номера различных категорий...</div>
+		</div>
+	</a>
+	<a href="#" class="blocks__item--6 blocks__item">
+		<div class="blocks__content">
+			<div class="blocks__title">Ресторан & Бар</div>
+			<div class="blocks__text">ощутите свободу вкуса</div>
+			<div class="blocks__info">Скидка 50% на всю винную карту...</div>
+		</div>
+	</a>
+</div>
+
+<div class="advantage">
+	<div class="container">
+		<div class="advantage__content">
+			<h2 class="section__title">Наши преимущества</h2>
+			<div class="advantage__blocks">
+				<div class="advantage__item">
+					<div class="advantage__item__content">
+						<img src="images/advantage/лыжник.png" alt="" class="advantage__photo">
+	                    <div class="advantage__text"><h3 class="advantage__item__title">Обучение</h3>Множество программ обучения горным лыжам и сноуборду, рассчитанных на разный уровень подготовки.<br><strong>Научиться сможет каждый!</strong></div>
+                    </div>
+				</div>
+				<div class="advantage__item">
+					<div class="advantage__item__content">
+						<img src="images/advantage/горы.png" alt="" class = "advantage__photo">
+	                    <div class="advantage__text"><h3 class="advantage__item__title">Экстрим</h3>Уникальная возможность покорения самой выcокой отметки России - горы Эльбрус 5642м. <strong>Записывайтесь на тур восхождения у нас!</strong></div>
+                    </div>
+				</div>
+				<div class="advantage__item">
+					<div class="advantage__item__content">
+						<img src="images/advantage/халат.png" alt="" class = "advantage__photo">
+	                    <div class="advantage__text"><h3 class="advantage__item__title">Отдых</h3>Спа-комплекс и баня помогут вам расслабиться, а благодаря нашим опытыным массажистам и врачам <br><strong>Вы всегда будете в отличной форме!</strong></div>
+                    </div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+<div class="season season--winter">
+	<div class="slide">
+		<div class="season__item">
+			<img src="images/season/1.jpg" class="season__image season__image--winter" alt="">
+			<div class="season__field season__field--winter">
+				<div class="season__header">
+					<h2 class="season__title">Зимой</h2>
+					<h3 class="season__subtitle">Горные лыжи</h3>
+					<p class="season__text">Горнолыжный курорт Mountain Peaks предлагает вам подготовленные горнолыжные склоны мирового уровня, удобные канатно-кресельные подъёмники и высокий уровень сервиса!</p>
+				</div>
+				<div class="season__content">
+					<div class="season__content__icon">
+						<p><span>100</span><strong>км</strong> горнолыжных<br>трасс</p>
+					</div>
+					<div class="season__content__icon">
+						<p><span>6</span><strong>программ</strong><br>обучения горным лыжам</p>
+					</div>
+					<div class="season__content__icon">
+						<p><span>50</span><strong>бесплатных</strong><br>подъемов и спусков</p>
+					</div>
+					<div class="season__content__text">
+						<h4>Инструкторы</h4>
+						<p class="season__text season__text--align">Занятия проводят высококвалифицированные инструкторы</p>
+					</div>
+					<div class="season__content__text">
+						<h4>Прокат снаряжения</h4>
+						<p class="season__text season__text--align">В пункте проката доступно 600 комплектов горных лыж  ведущих брендов мира</p>
+					</div>
+				</div>
+				<button class="button--winter">Узнать больше<img src="images/season/forward.svg" alt=""></button>
+			</div>
+		</div>
+	</div>
+	<div class="slide">
+		<div class="season__item">
+			<img src="images/season/2.jpg" class="season__image season__image--winter" alt="">
+			<div class="season__field season__field--winter">
+				<div class="season__header">
+					<h2 class="season__title">Зимой</h2>
+					<h3 class="season__subtitle">Сноубординг</h3>
+					<p class="season__text">Вы можете записаться к тренеру на индивидуальное занятия или прийти в нашу школу сноубординга, с тремя новыми программами для новичков, любителей и профи!</p>
+				</div>
+				<div class="season__content">
+					<div class="season__content__icon">
+						<p><span>120</span><br>сноубордов<br>на ваш выбор</p>
+					</div>
+					<div class="season__content__icon">
+						<p><span>3</span><strong>программы</strong><br>обучения в <br>школе</p>
+					</div>
+					<div class="season__content__icon">
+						<p><span>8</span><strong>трасс</strong><br>различных уровней сложности</p>
+					</div>
+					<div class="season__content__text ">
+						<h4>Сноуборды</h4><p class="season__text season__text--align">200 сноубордов ведущих производителей в прокате</p>
+					</div>
+					<div class="season__content__text">
+						<h4>Соревнования</h4><p class="season__text season__text--align">Cоревнования с  призами в которых может поучаствовать каждый!</p>
+					</div>
+				</div>
+				<button class="button--winter">Узнать больше<img src="images/season/forward.svg" alt=""></button>
+			</div>
+		</div>
+	</div>
+	<div class="slide">
+		<div class="season__item">
+			<img src="images/season/3.jpg" class="season__image season__image--winter" alt="">
+			<div class="season__field season__field--winter">
+				<div class="season__header">
+					<h2 class="season__title">Зимой</h2>
+					<h3 class="season__subtitle">Каток</h3>
+					<p class="season__text">Приглашаем насладиться катанием на коньках на открытом катке всей семьей. В темное время суток каток освещается по периметру.Если у вас нет своих коньков, вы всегда можете воспользоваться услугами нашего проката.</p>
+				</div>
+				<div class="season__content">
+					<div class="season__content__icon">
+						<p><span>24</span><strong>часа</strong><br>каток открыт<br>для вас</p>
+					</div>
+					<div class="season__content__icon">
+						<p><span>3</span><strong>занятия</strong><br>с тренером<br>бесплатно</p>
+					</div>
+					<div class="season__content__icon season__content__icon--infinity">
+						<p><span class="infinity">30</span><strong>размеров</strong><br>коньков на ваш выбор</p>
+					</div>
+					<div class="season__content__text">
+						<h4>Услуги</h4>
+						<p class="season__text season__text--align">Оказываем услуги по затачиванию ваших коньков прямо возле катка</p>
+					</div>
+					<div class="season__content__text">
+						<h4>Летом</h4>
+						<p class="season__text season__text--align">В летнее время на каток работает в режиме роллердрома</p>
+					</div>
+				</div>
+				<button class="button--winter">Узнать больше<img src="images/season/forward.svg" alt=""></button>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="season season--summer">
+	<div class="slide">
+		<div class="season__item">
+			<img src = "images/season/4.jpg" class="season__image season__image--summer" alt="">
+			<div class="season__field season__field--summer">
+				<div class="season__header">
+					<h2 class="season__title">Летом</h2>
+					<h3 class="season__subtitle">Треккинг</h3>
+					<p class="season__text">Во время походов у вас будет возможность увидеть озера, водопады, пещеры, ледники, альпийские луга и, конечно же, все это на фоне возвышающегося Эльбруса.</p>
+				</div>
+				<div class="season__content">
+					<div class="season__content__icon">
+						<p><span>10</span><strong>маршрутов</strong><br>уникальных своей<br>историей</p>
+					</div>
+					<div class="season__content__icon">
+						<p><span>3</span><strong>уровня</strong><br>сложности на твой выбор</p>
+					</div>
+					<div class="season__content__icon">
+						<p><span>2-7</span><strong>дней</strong><br>продолжительность туров</p>
+					</div>
+					<div class="season__content__text">
+						<h4>Даты</h4>
+						<p class="season__text season__text--align">Треккинг-туры проводятся с<br> мая по октябрь  каждого года</p>
+					</div>
+					<div class="season__content__text">
+						<h4>Группы</h4>
+						<p class="season__text season__text--align">На маршрут осуществляется как индивидуальная так и групповая запись</p>
+					</div>
+				</div>
+				<button class="button--summer">Узнать больше<img src="images/season/forward.svg" alt=""></button>
+			</div>
+		</div>
+	</div>
+	<div class="slide">
+		<div class="season__item">
+			<img src = "images/season/5.jpg" class="season__image season__image--summer" alt="">
+			<div class="season__field season__field--summer">
+				<div class="season__header">
+					<h2 class="season__title">Летом</h2>
+					<h3 class="season__subtitle">Туры на электровелосипедах</h3>
+					<p class="season__text"> Благодаря помощи электромотора доступными становятся маршруты, о которых на обычном велосипеде нельзя было и подумать.Путешествуйте по горам с удовольствием при любом уровне подготовки!</p>
+				</div>
+				<div class="season__content">
+					<div class="season__content__icon">
+						<p><span>5</span><strong>трасс</strong><br>по горной<br>местности</p>
+					</div>
+					<div class="season__content__icon">
+						<p><span>7</span><strong>видов</strong><br>велосипедов<br>на ваш выбор</p>
+					</div>
+					<div class="season__content__icon">
+						<p><span>178</span><strong>км</strong><br>незабываемых приключений</p>
+					</div>
+					<div class="season__content__text">
+						<h4>Маршруты</h4>
+						<p class="season__text season__text--align">Маршруты рассчитаны на любую возрастную категорию, путешествуйте всей семьёй!</p>
+					</div>
+					<div class="season__content__text">
+						<h4>Продолжительность</h4>
+						<p class="season__text season__text--align">Продолжительность туров от 1 часа до 7 часов</p>
+					</div>
+				</div>
+				<button class="button--summer">Узнать больше<img src="images/season/forward.svg" alt=""></button>
+			</div>
+		</div>
+	</div>
+	<div class="slide">
+		<div class="season__item">
+			<img src = "images/season/6.jpg" class="season__image season__image--summer" alt="">
+			<div class="season__field season__field--summer">
+				<div class="season__header">
+					<h2 class="season__title">Летом</h2>
+					<h3 class="season__subtitle">Восхождение на вершину</h3>
+					<p class="season__text">Подъем на вершину горы — это всегда испытание и преодоление. Чтобы оказаться в высочайшей точке Европы, вам предстоит проверить себя на прочность. Научиться ходить в кошках, правильно использовать ледоруб и подготовить организм к пониженному содержанию кислорода.</p>
+				</div>
+				<div class="season__content">
+					<div class="season__content__icon">
+						<p><span>9</span><strong>дней</strong><br>тура до вершины</p>
+					</div>
+					<div class="season__content__icon">
+						<p><strong>до</strong><span>15</span><br>человек в группе</p>
+					</div>
+					<div class="season__content__icon">
+						<p><span>3</span><strong>незабываемых</strong><br>рассвета в горах</p>
+					</div>
+					<div class="season__content__text">
+						<h4>Комфорт</h4>
+						<p class="season__text season__text--align">Маршрут рассчитан на 9 дней, чтобы ваша акклиматизация прошла максимально комфортно.</p>
+					</div>
+					<div class="season__content__text">
+						<h4>Безопасность</h4>
+						<p class="season__text season__text--align">Вы будете под присмотром наших опытных инструкторов</p>
+					</div>
+				</div>
+				<button class="button--summer">Узнать больше<img src="images/season/forward.svg" alt=""></button>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="container">
+	<h2 class="section__title">Наш инстаграмм</h2>
+</div>
+
+<div class="insta">
+	<div class="insta__col-1">
+		<div class="insta__item">
+			<img class="insta__image" src="images/gallery/ExportFigma/1.png" alt="">
+			<div class="insta__info">
+				<div class="insta__title">Посетите наш инстаграмм</div>
+				<div class="insta__text">Фото 1</div>
+			</div>
+		</div>
+		<div class="insta__item">
+			<img class="insta__image" src="images/gallery/ExportFigma/2.png" alt="">
+			<div class="insta__info">
+				<div class="insta__title">Посетите наш инстаграмм</div>
+				<div class="insta__text">Фото 2</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="insta__col-2">
+		<div class="insta__item">
+			<img class="insta__image" src="images/gallery/3.png" alt="">
+			<div class="insta__info">
+				<div class="insta__title">Посетите наш инстаграмм</div>
+				<div class="insta__text">Фото 3</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="insta__col-3">
+		<div class="insta__item">
+			<img class="insta__image" src="images/gallery/ExportFigma/4.png" alt="">
+			<div class="insta__info">
+				<div class="insta__title">Посетите наш инстаграмм</div>
+				<div class="insta__text">Фото 4</div>
+			</div>
+		</div>
+		<div class="insta__col-flex">
+			<div class="insta__item">
+				<img class="insta__image" src="images/gallery/ExportFigma/5.png" alt="">
+				<div class="insta__info">
+					<div class="insta__title">Посетите наш инстаграмм</div>
+					<div class="insta__text">Фото 5</div>
+				</div>
+			</div>
+			<div class="insta__item">
+				<img class="insta__image" src="images/gallery/ExportFigma/6.png" alt="">
+				<div class="insta__info">
+					<div class="insta__title">Посетите наш инстаграмм</div>
+					<div class="insta__text">Фото 6</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="insta__col-4">
+		<div class="insta__item">
+			<img class="insta__image" src="images/gallery/ExportFigma/5.png" alt="">
+			<div class="insta__info">
+				<div class="insta__title">Посетите наш инстаграмм</div>
+				<div class="insta__text">Фото 1</div>
+			</div>
+		</div>
+		<div class="insta__item">
+			<img class="insta__image" src="images/gallery/ExportFigma/6.png" alt="">
+			<div class="insta__info">
+				<div class="insta__title">Посетите наш инстаграмм</div>
+				<div class="insta__text">Фото 2</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<!-- <section class="section"> -->
+	<h2 class="section__title">Отзывы</h2>
+	<div class="section--review">
+		<div class="container">
+			<div class="reviews">
+					<div class="review__item">
+						<img class = "review__photo" src="images/review/1.png" alt="">
+						<div class="review__name">Евгений, блоггер-путешественник</div>
+						<div class="review__text">Одно из любимых мест отдыха. Как зимнего: горные лыжи, сноуборд, так и летнего (множество треков, велосипедные туры, беседки с мангалом, бассейн). Все на высоком уровне, в том числе и цены:) Но это правильно, я считаю. Очень красивое место в горах. Приеду еще и не раз,  планирую пройти все треки по приэльбрусью.</div>
+					</div>
+					<div class="review__item">
+						<img class = "review__photo" src="images/review/2.png" alt="">
+						<div class="review__name">Анастасия, студентка</div>
+						<div class="review__text">Прекрасное место для любителей подышать свежим воздухом. В первую очередь курорт предназначен для катания на горных лыжах, где есть возможность позаниматься с инструктором, для детей и начинающих есть отдельный скат. Для других любителей активного отдыха есть возможность отправиться на треки или покорять вершины Эльбруса. Очень уютные коттеджи, есть хороший ресторан и спорт-бар.</div>
+					</div>
+					<div class="review__item">
+						<img class = "review__photo" src="images/review/3.png" alt="">
+						<div class="review__name">Александр, инженер конструктор</div>
+						<div class="review__text">Одно из любимых мест отдыха. Как зимнего: горные лыжи, сноуборд, так и летнего (множество треков, велосипедные туры, беседки с мангалом, бассейн). Все на высоком уровне, в том числе и цены:) Но это правильно, я считаю. Очень красивое место в горах. Приеду еще и не раз,  планирую пройти все треки по приэльбрусью.</div>
+					</div>
+					<div class="review__item">
+						<img class = "review__photo" src="images/review/1.png" alt="">
+						<div class="review__name">Евгений, блоггер-путешественник</div>
+						<div class="review__text">Одно из любимых мест отдыха. Как зимнего: горные лыжи, сноуборд, так и летнего (множество треков, велосипедные туры, беседки с мангалом, бассейн). Все на высоком уровне, в том числе и цены:) Но это правильно, я считаю. Очень красивое место в горах. Приеду еще и не раз,  планирую пройти все треки по приэльбрусью.</div>
+					</div>
+					<div class="review__item">
+						<img class = "review__photo" src="images/review/2.png" alt="">
+						<div class="review__name">Анастасия, студентка</div>
+						<div class="review__text">Прекрасное место для любителей подышать свежим воздухом. В первую очередь курорт предназначен для катания на горных лыжах, где есть возможность позаниматься с инструктором, для детей и начинающих есть отдельный скат. Для других любителей активного отдыха есть возможность отправиться на треки или покорять вершины Эльбруса. Очень уютные коттеджи, есть хороший ресторан и спорт-бар.</div>
+					</div>
+					<div class="review__item">
+						<img class = "review__photo" src="images/review/3.png" alt="">
+						<div class="review__name">Александр, инженер конструктор</div>
+						<div class="review__text">Одно из любимых мест отдыха. Как зимнего: горные лыжи, сноуборд, так и летнего (множество треков, велосипедные туры, беседки с мангалом, бассейн). Все на высоком уровне, в том числе и цены:) Но это правильно, я считаю. Очень красивое место в горах. Приеду еще и не раз,  планирую пройти все треки по приэльбрусью.</div>
+					</div>
+			</div>
+		</div>
+	</div>
+<!-- </section> -->
+
+<div class="map">
+	<div class="googlemaps">
+		<iframe src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d1447490.8336160148!2d43.27012372919565!3d43.14053051752609!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1z0KDQvtGB0YHQuNGPLCDQodC10LLQtdGA0L4t0JrQsNCy0LrQsNC30YHQutC40Lkg0KTQtdC00LXRgNCw0LvRjNC90YvQuSDQvtC60YDRg9CzLCDQmtCR0KAsINCt0LvRjNCx0YDRg9GB0YHQutC40Lkg0YDQsNC50L7QvSwg0JDQtNGL0Lst0KHRg9GD!5e0!3m2!1sru!2sru!4v1574368680255!5m2!1sru!2sru" width="100%" height="550" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+	</div>
+	<div class="container">
+		<div class="map__inner">
+			<div class="contacts" id="contacts">
+				<h2 class="contacts__title">Как нас найти</h2>
+				<div class="contacts__item">
+					<h3>Офис</h3>
+					<div class="contacts__text">
+						<p>Москва, Кутузовский пр., 36 строение 6, Москва, 121170.</p>
+						<p>тел: <strong>8 (495) 500-50-50</strong></p>
+						<p>с 9:00 до 21:00 пн-вс</p>
+					</div>
+				</div>
+				<div class="contacts__item">
+					<h3>Курорт</h3>
+					<div class="contacts__text">
+						<p>Россия, Северо-Кавказский Федеральный округ, КБР, Эльбрусский район, Адыл-Суу, Отель «Mountain Peaks».</p>
+						<p>тел: <strong>+7 (928) 900-90-90</strong></p>
+						<p>круглосуточно</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<footer class="footer">
+	<div class="container">
+		<div class="footer__content">
+			<div class="footer__logo">
+				<img src="images/svg/logo.svg" alt="">
+				<p>© 2019 «Mountain Peaks»</p>
+			</div>
+			<div class="footer__text">
+				<h3>Информация</h3>
+				<a href="#" >О курорте</a>
+				<a href="#" >Контакты</a>
+				<a href="#" >Веб камеры</a>
+				<a href="#" >Соглашения</a>
+				<a href="#" >Конфиденциальность</a>
+			</div>
+			<div class="footer__text">
+				<h3>Услуги</h3>
+				<a href="#" >Активный отдых</a>
+				<a href="#" >Проживание</a>
+				<a href="#" >Обучение</a>
+				<a href="#" >Спа комплекс</a>
+				<a href="#" >Ресторан и бар</a>
+			</div>
+			<div class="footer__icons">
+				<p>Присоединяйтесь к нам в соц сетях</p>
+				<div class="icons">
+					<a class = "icons__item" href=""><img src="images/svg/VK.svg" alt=""></a>
+					<a class = "icons__item" href=""><img src="images/svg/Instagram.svg" alt=""></a>
+					<a class = "icons__item" href=""><img src="images/svg/facebook-1.svg" alt=""></a>
+					<a class = "icons__item" href=""><img src="images/svg/youtube.svg" alt=""></a>
+				</div>
+			</div>
+		</div>
+	</div>
+</footer>
+</div>
+<script src="js/jquery-3.2.1.min.js"></script>
+<script src="js/slick/slick.min.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
